@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindShield | Cuidando da Sua Mente</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-inner container">
+<img src="midia/Prancheta 1.png" alt="MindShield Logo" style="max-width: 100px; height: auto;" />
+      <h1> MindShield</h1>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="apoio.html">Apoio</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="informacoes.html">Informações</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <button id="theme-toggle" title="Alternar tema">🌙</button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <main class="container">
+    <section class="hero" style="text-align:center;">
+      <h2>Bem-vindo(a) ao MindShield 💛</h2>
+      <p>
+        Cuidar da mente é um ato de coragem.  
+        Aqui você encontra acolhimento, informações e ferramentas para o bem-estar emocional.  
+        Um espaço feito com empatia, para você nunca se sentir só.
+      </p>
+    </section>
+
+    <!-- ===== CARDS DE NAVEGAÇÃO ===== -->
+    <section>
+      <h2 style="text-align:center; margin-bottom: 18px;">Explore o MindShield</h2>
+      <div class="cards">
+        <a href="apoio.html" class="card">
+          <h3>Apoio Emocional</h3>
+          <p>Converse com nossa IA empática e receba acolhimento e orientações cuidadosas.</p>
+        </a>
+
+        <a href="galeria.html" class="card">
+          <h3>Palestra</h3>
+          <p>Palestra feita pelo time da MindShield em escolas.</p>
+        </a>
+
+        <a href="informacoes.html" class="card">
+          <h3>ℹInformações e Dicas</h3>
+          <p>Conteúdos sobre saúde mental, autocuidado e bem-estar emocional.</p>
+        </a>
+
+        <a href="contato.html" class="card">
+          <h3>Fale Conosco</h3>
+          <p>Entre em contato conosco e compartilhe sua experiência ou sugestão.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="about" style="text-align:center;">
+      <h2>💛 Nossa missão</h2>
+      <p>
+        O MindShield nasceu do desejo de usar a tecnologia para o bem.  
+        Um ambiente acolhedor, onde cada conversa importa,  
+        e cada pessoa encontra um espaço para respirar, refletir e se cuidar.
+      </p>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 MindShield | Luz, empatia e acolhimento 💛</p>
+  </footer>
+
+  <!-- ===== SCRIPT DE TEMA ===== -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+    toggleBtn.textContent = savedTheme === 'dark' ? '🌞' : '🌙';
+    toggleBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      toggleBtn.textContent = next === 'dark' ? '🌞' : '🌙';
+    });
+  </script>
+</body>
+</html>

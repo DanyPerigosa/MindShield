@@ -1,0 +1,124 @@
+
+{
+  "1": {
+    "pergunta": "Sinto-me acolhido(a) e respeitado(a) na escola.",
+    "observacao": "(Marque sua avaliação)"
+  },
+  "2": {
+    "pergunta": "Consigo expressar meus sentimentos e opiniões sem medo de julgamento.",
+    "observacao": "(Marque sua avaliação)"
+  },
+  "3": {
+    "pergunta": "Acredito que meus colegas demonstram empatia quando alguém está passando por dificuldades.",
+    "observacao": "(Marque sua avaliação)"
+  },
+  "4": {
+    "pergunta": "Percebo que professores e funcionários se preocupam genuinamente com o bem-estar dos alunos.",
+    "observacao": "(Marque sua avaliação)"
+  },
+  "5": {
+    "pergunta": "Tenho consciência sobre os impactos emocionais causados pelo bullying e pela exclusão social.",
+    "observacao": "(Marque sua avaliação)"
+  },
+  "6": {
+    "pergunta": "Sinto que posso pedir ajuda quando enfrento momentos difíceis.",
+    "observacao": "(Marque sua avaliação)"
+  },
+  "7": {
+    "pergunta": "Percebo que a escola promove ações de conscientização sobre saúde mental.",
+    "observacao": "(Marque sua avaliação)"
+  },
+  "8": {
+    "pergunta": "Acredito que campanhas como o Setembro Amarelo são importantes para a valorização da vida.",
+    "observacao": "(Marque sua avaliação)"
+  },
+  "9": {
+    "pergunta": "Sinto-me confortável em falar sobre emoções e sentimentos com amigos ou familiares.",
+    "observacao": "(Marque sua avaliação)"
+  },
+  "10": {
+    "pergunta": "Que tipo de ajuda você considera mais acessível:",
+    "opcoes": [
+      "Apoio psicológico presencial",
+      "Plataformas digitais",
+      "Conversas entre colegas"
+    ]
+  },
+  "11": {
+    "pergunta": "Quais medidas a escola poderia adotar para identificar precocemente sinais de sofrimento emocional?"
+  },
+  "12": {
+    "pergunta": "Você considera importante a criação de rodas de conversa periódicas sobre saúde mental na escola?",
+    "opcoes": [
+      "Sim",
+      "Não"
+    ]
+  },
+  "13": {
+    "pergunta": "Você conhece canais ou plataformas de apoio emocional disponíveis em sua comunidade?",
+    "opcoes": [
+      "Sim",
+      "Não"
+    ]
+  },
+  "14": {
+    "pergunta": "Em sua visão o quão acolhedor são os meios de fortalecimento do respeito e diálogo entre alunos que a sua escola implementa?",
+    "observacao": "(Marque sua avaliação)"
+  },
+  "15": {
+    "pergunta": "Tenho interesse em conhecer meios acessíveis de preservação e cuidado a vida.",
+    "opcoes": [
+      "Sim",
+      "Não"
+    ]
+  },
+  "16": {
+    "pergunta": "Você considera que o bullying é um problema mais frequente no ambiente físico ou nas redes sociais?",
+    "opcoes": [
+      "Físico",
+      "Online",
+      "Ambos"
+    ]
+  },
+  "17": {
+    "pergunta": "Com que frequência você percebe atitudes de exclusão ou zombarias em sua escola?",
+    "opcoes": [
+      "Sempre",
+      "Às vezes",
+      "Raramente",
+      "Nunca"
+    ]
+  },
+  "18": {
+    "pergunta": "Você acredita que os professores e funcionários estão preparados para lidar com questões de saúde mental?",
+    "opcoes": [
+      "Sim",
+      "Parcialmente",
+      "Não"
+    ]
+  },
+  "19": {
+    "pergunta": "Você conhece o significado do laço amarelo e o que ele representa?",
+    "opcoes": [
+      "Sim",
+      "Não"
+    ]
+  },
+  "20": {
+    "pergunta": "O que mais te motiva a buscar informação sobre saúde mental?",
+    "opcoes": [
+      "Curiosidade",
+      "Experiência pessoal",
+      "Apoiar alguém",
+      "Outro"
+    ]
+  },
+
+
+  "olá": "Olá! Como você está se sentindo hoje?",
+  "oi": "Oi! Quer conversar um pouco?",
+  "triste": "Sinto muito por isso. Quer me contar o que aconteceu?",
+  "feliz": "Que bom ouvir isso! Continue se cuidando. 😊"
+
+
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindShield | Sobre e Informações</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-inner container">
+      <img src="midia/Prancheta 1.png" alt="MindShield Logo" style="max-width: 100px; height: auto;" />
+      <h1> MindShield</h1>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="apoio.html">Apoio</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="informacoes.html">Informações</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <button id="theme-toggle" title="Alternar tema">🌙</button>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="container">
+    <section class="hero" style="text-align:center;">
+      <h2>Sobre o MindShield 💛</h2>
+      <p>
+        O MindShield é um projeto criado para promover o bem-estar emocional e facilitar o acesso a informações de apoio psicológico.
+        Aqui, você encontra empatia, acolhimento e ferramentas para cuidar de si mesmo.
+      </p>
+    </section>
+
+    <section>
+      <h2>Nossa Missão</h2>
+      <p>
+        Acreditamos que toda pessoa merece ser ouvida, compreendida e acolhida.
+        Nossa missão é oferecer um espaço seguro e humanizado, onde a tecnologia é usada para o bem —
+        ajudando cada pessoa a cuidar da própria mente com respeito e empatia.
+      </p>
+    </section>
+
+    <section>
+      <h2>Como o MindShield pode ajudar</h2>
+      <ul class="list">
+        <li class="item">💬 Conversas acolhedoras com nossa IA empática.</li>
+        <li class="item">📊 Autoavaliações simples para acompanhar seu bem-estar emocional.</li>
+        <li class="item">🧘 Conteúdos e dicas sobre saúde mental e autocuidado.</li>
+        <li class="item">🌄 Galeria de vídeos e imagens relaxantes para aliviar o estresse.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Privacidade e Segurança</h2>
+      <p>
+        A confidencialidade é uma prioridade.  
+        Nenhuma conversa é compartilhada ou utilizada fora do ambiente do MindShield.
+        Nosso objetivo é garantir segurança e confiança a quem busca acolhimento.
+      </p>
+    </section>
+
+    <section class="about" style="text-align:center;">
+      <h2>💛 Um lembrete</h2>
+      <p>
+        Você não está sozinho(a).  
+        Falar sobre o que sente é um ato de coragem — e o primeiro passo para a cura emocional.
+        O MindShield está aqui para caminhar com você, um dia de cada vez.
+      </p>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 MindShield | Cuidando de você com empatia 💛</p>
+  </footer>
+
+  <!-- ===== SCRIPT DE TEMA ===== -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+    toggleBtn.textContent = savedTheme === 'dark' ? '🌞' : '🌙';
+    toggleBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      toggleBtn.textContent = next === 'dark' ? '🌞' : '🌙';
+    });
+  </script>
+</body>
+</html>

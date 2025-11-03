@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria - MindShield</title>
+  <link rel="stylesheet" href="css/galeria.css" />
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-inner container">
+      <img src="midia/Prancheta 1.png" alt="MindShield Logo" style="max-width: 100px; height: auto;" />
+      <h1>MindShield</h1>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="apoio.html">Apoio</a>
+        <a href="galeria.html" class="active">Galeria</a>
+        <a href="informacoes.html">Informações</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <button id="theme-toggle" title="Alternar tema">🌙</button>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="container">
+    <!-- ===== SLIDER ===== -->
+    <section class="slider-container">
+      <div class="slider">
+        <button class="arrow prev">&#10094;</button>
+        <img src="midia/Projeto Mindshield_pages-to-jpg-0001.jpg" alt="Slide" id="slider-img">
+        <button class="arrow next">&#10095;</button>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ===== GALERIA GRID ===== -->
+    <section class="galeria">
+      <h2>Registros da Palestra</h2>
+      <div class="grid">
+        <img src="midia/FOTOS DA INTERVENÇÃO_pages-to-jpg-0001.jpg" alt="">
+        <img src="midia/FOTOS DA INTERVENÇÃO_pages-to-jpg-0002.jpg" alt="">
+        <img src="midia/FOTOS DA INTERVENÇÃO_pages-to-jpg-0006.jpg" alt="">
+        <img src="midia/FOTOS DA INTERVENÇÃO_pages-to-jpg-0007.jpg" alt="">
+        <img src="midia/FOTOS DA INTERVENÇÃO_pages-to-jpg-0008.jpg" alt="">
+        <img src="midia/FOTOS DA INTERVENÇÃO_pages-to-jpg-0009.jpg" alt="">
+        <img src="midia/FOTOS DA INTERVENÇÃO_pages-to-jpg-0013.jpg" alt="">
+        <img src="midia/FOTOS DA INTERVENÇÃO_pages-to-jpg-0024.jpg" alt="">
+        <img src="midia/FOTOS DA INTERVENÇÃO_pages-to-jpg-0025.jpg" alt="">
+        <img src="midia/FOTOS DA INTERVENÇÃO_pages-to-jpg-0027.jpg" alt="">
+      </div>
+    </section>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img id="lightbox-img" src="" alt="Ampliado" />
+    </div>
+
+    <hr class="divider" />
+
+    <!-- ===== VÍDEO ===== -->
+    <section class="video-section">
+      <h2>Entrevista MindShield</h2>
+      <video controls>
+        <source src="midia/AUDIO CAST - ENTREVISTA - 25-09-2025 (1).mp4" type="video/mp4">
+        Seu navegador não suporta a reprodução de vídeos.
+      </video>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 MindShield | Luz, empatia e acolhimento 💛</p>
+  </footer>
+
+  <!-- ===== SCRIPT ===== -->
+  <script>
+    /* --- Slider Automático + Manual --- */
+    const images = [
+      "midia/Projeto Mindshield_pages-to-jpg-0001.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0002.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0003.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0004.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0005.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0006.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0007.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0008.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0009.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0010.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0011.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0012.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0013.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0014.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0015.jpg",
+      "midia/Projeto Mindshield_pages-to-jpg-0016.jpg",
+    ];
+
+    let current = 0;
+    const img = document.getElementById("slider-img");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+
+    function showImage(index, direction) {
+      img.classList.remove("slide-left", "slide-right");
+      void img.offsetWidth; // Reinicia a animação
+      img.src = images[index];
+      img.classList.add(direction === "left" ? "slide-left" : "slide-right");
+    }
+
+    prev.addEventListener("click", () => {
+      current = (current - 1 + images.length) % images.length;
+      showImage(current, "left");
+      resetTimer();
+    });
+
+    next.addEventListener("click", () => {
+      current = (current + 1) % images.length;
+      showImage(current, "right");
+      resetTimer();
+    });
+
+    // Slider automático
+    let slideTimer = setInterval(() => {
+      current = (current + 1) % images.length;
+      showImage(current, "right");
+    }, 5000);
+
+    function resetTimer() {
+      clearInterval(slideTimer);
+      slideTimer = setInterval(() => {
+        current = (current + 1) % images.length;
+        showImage(current, "right");
+      }, 5000);
+    }
+
+    /* --- Lightbox --- */
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const close = document.querySelector(".close");
+
+    document.querySelectorAll(".grid img").forEach(imgEl => {
+      imgEl.addEventListener("click", () => {
+        lightbox.classList.add("show");
+        lightboxImg.src = imgEl.src;
+      });
+    });
+
+    close.addEventListener("click", () => {
+      lightbox.classList.remove("show");
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) lightbox.classList.remove("show");
+    });
+
+    /* --- Tema escuro --- */
+    const toggleBtn = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+    toggleBtn.textContent = savedTheme === 'dark' ? '🌞' : '🌙';
+    toggleBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      toggleBtn.textContent = next === 'dark' ? '🌞' : '🌙';
+    });
+
+    // --- Animação Fade-Up nas imagens do Grid ---
+const gridImages = document.querySelectorAll('.grid img');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+gridImages.forEach(img => observer.observe(img));
+
+  </script>
+</body>
+</html>
